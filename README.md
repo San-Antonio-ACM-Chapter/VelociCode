@@ -31,5 +31,6 @@ push to `main`. It needs two repository secrets:
 | `CLOUDFLARE_API_TOKEN` | Deploy token, Workers Scripts: Edit on the ACM SA account |
 | `CLOUDFLARE_ACCOUNT_ID` | ACM SA Cloudflare account |
 
-The `velocicode.acmsa.org` custom domain is attached to the `velocicode`
-Worker in the Cloudflare dashboard, not in `wrangler.jsonc`.
+The site is served from the Worker's `workers.dev` URL until the `acmsa.org`
+zone moves into the ACM SA Cloudflare account. The `velocicode.acmsa.org`
+custom domain is then attached in the dashboard, not in `wrangler.jsonc`.

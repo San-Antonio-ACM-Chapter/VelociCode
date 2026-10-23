@@ -7,7 +7,8 @@
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page"
   },
-  // velocicode.acmsa.org is attached once in the dashboard, so the deploy
-  // token doesn't need DNS or zone permissions on acmsa.org.
-  "workers_dev": false
+  // velocicode.acmsa.org can't be attached until the acmsa.org zone moves
+  // into this account; it'll be added in the dashboard then, so the deploy
+  // token never needs zone permissions. Until then, serve from workers.dev.
+  "workers_dev": true
 }
