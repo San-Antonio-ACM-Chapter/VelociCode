@@ -1,0 +1,28 @@
+{
+  "name": "velocicode",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.17.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "preview": "next build && wrangler dev",
+    "lint": "biome check",
+    "format": "biome format --write"
+  },
+  "dependencies": {
+    "next": "^16.2.12",
+    "qrcode-generator": "^2.0.4",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.0",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "babel-plugin-react-compiler": "1.0.0",
+    "typescript": "^5",
+    "wrangler": "^4.151.3"
+  }
+}

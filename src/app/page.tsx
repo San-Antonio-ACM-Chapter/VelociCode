@@ -10,7 +10,7 @@ import {
 import { Fragment } from "react";
 import { AccordionFAQ, type FaqItem } from "./AccordionFAQ";
 import { COMMUNITY_PARTNERS, SPONSORS } from "./allies";
-import { RSVP_URL, STOPS } from "./events";
+import { KICKOFF_VIDEO, RSVP_URL, SHOW_OUTREACH, STOPS, THEME } from "./events";
 import { VCHeroScene } from "./graphics/VCHeroScene";
 import { VCSymbols } from "./graphics/VCSymbols";
 import { JudgesCarousel } from "./JudgesCarousel";
@@ -456,7 +456,7 @@ export default function VelociCodePage() {
                 {/* See the route */}
                 Partners
               </a>
-              {(process.env.VELOCICODE_OUTREACH !== "false" && (
+              {(SHOW_OUTREACH && (
                 <a
                   className={`${styles.btn} ${styles["btn-jungle"]}`}
                   href="#partners"
@@ -547,16 +547,14 @@ export default function VelociCodePage() {
 
       {/* ─── THEME REVEAL / PRE-REVEAL ──────────────────────────────── */}
       <section className={styles["theme-reveal"]}>
-        {process.env.VELOCICODE_THEME ? (
+        {THEME ? (
           <>
             <div className={styles["theme-eye"]}>The Theme Is Revealed</div>
-            <div className={styles["theme-name"]}>
-              {process.env.VELOCICODE_THEME}
-            </div>
-            {process.env.VELOCICODE_KICKOFF_VIDEO && (
+            <div className={styles["theme-name"]}>{THEME}</div>
+            {KICKOFF_VIDEO && (
               <a
                 className={styles["theme-video-btn"]}
-                href={process.env.VELOCICODE_KICKOFF_VIDEO}
+                href={KICKOFF_VIDEO}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -574,10 +572,10 @@ export default function VelociCodePage() {
               >
                 ⊕ Consult The Compass
               </a>
-              {process.env.VELOCICODE_KICKOFF_VIDEO && (
+              {KICKOFF_VIDEO && (
                 <a
                   className={styles["theme-video-btn"]}
-                  href={process.env.VELOCICODE_KICKOFF_VIDEO}
+                  href={KICKOFF_VIDEO}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -809,7 +807,7 @@ export default function VelociCodePage() {
                     href={s.href}
                   />
                 ))}
-                {process.env.VELOCICODE_OUTREACH !== "false" && (
+                {SHOW_OUTREACH && (
                   <a
                     className={`${styles.ally} ${styles["ally-add"]}`}
                     href="mailto:team@acmsa.org?subject=VelociCode%202%20%E2%80%94%20interested"
@@ -833,7 +831,7 @@ export default function VelociCodePage() {
             {COMMUNITY_PARTNERS.map((p) => (
               <AllyCard key={p.name} name={p.name} src={p.src} href={p.href} />
             ))}
-            {process.env.VELOCICODE_OUTREACH !== "false" && (
+            {SHOW_OUTREACH && (
               <a
                 className={`${styles.ally} ${styles["ally-add"]}`}
                 href="mailto:team@acmsa.org?subject=VelociCode%202%20%E2%80%94%20interested"
@@ -874,7 +872,7 @@ export default function VelociCodePage() {
       </SectionReveal>
 
       {/* ─── INVOLVED — set VELOCICODE_SHOW_INVOLVED=false to hide ──── */}
-      {process.env.VELOCICODE_OUTREACH !== "false" && (
+      {SHOW_OUTREACH && (
         <SectionReveal
           className={`${styles.block} ${styles.involved}`}
           id="involved"

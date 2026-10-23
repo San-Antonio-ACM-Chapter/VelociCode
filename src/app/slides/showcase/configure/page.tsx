@@ -118,9 +118,7 @@ function buildDeckUrl(
 ): string {
   const p = buildParams(games, organizers, winners, music);
   const qs = p.toString();
-  return qs
-    ? `${origin}/slides/showcase?${qs}`
-    : `${origin}/slides/showcase`;
+  return qs ? `${origin}/slides/showcase?${qs}` : `${origin}/slides/showcase`;
 }
 
 function buildConfigureUrl(

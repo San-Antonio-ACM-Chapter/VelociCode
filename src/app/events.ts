@@ -4,6 +4,12 @@ export type { InputStop };
 
 export const RSVP_URL = "https://www.meetup.com/acm-sa/events/312892484";
 
+// Set THEME to "" before kickoff to hide the theme reveal; turn outreach back
+// on while recruiting sponsors and mentors for the next jam.
+export const THEME = "Fossil";
+export const KICKOFF_VIDEO = "https://www.youtube.com/watch?v=mTCPh6k-an0";
+export const SHOW_OUTREACH = false;
+
 export const STOPS: InputStop[] = [
   {
     date: "2026-07-01T17:00",

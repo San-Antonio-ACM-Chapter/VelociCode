@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "velocicode",
+  "compatibility_date": "2026-10-19",
+  "assets": {
+    "directory": "./out",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  // velocicode.acmsa.org is attached once in the dashboard, so the deploy
+  // token doesn't need DNS or zone permissions on acmsa.org.
+  "workers_dev": false
+}

@@ -1,0 +1,25 @@
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+
+# cloudflare
+/.wrangler/
+.dev.vars*
+
+# misc
+.DS_Store
+*.pem
+*.tsbuildinfo
+
+# env files
+.env*.local
+
+# IDE / tooling
+.vscode/
+.idea/
+.claude/
+.playwright-mcp/
+.figma-mcp/
