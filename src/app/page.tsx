@@ -66,13 +66,13 @@ export const metadata: Metadata = {
   description:
     "San Antonio's month-long game jam. One month. One game. No excuses. Hosted by ACM SA and the Greater Gaming Society.",
   alternates: {
-    canonical: "https://velocicode.acmsa.org",
+    canonical: "https://2026.velocicode.acmsa.org",
   },
   openGraph: {
     title: "VelociCode — ACM San Antonio",
     description:
       "San Antonio's month-long game jam. One month. One game. No excuses. Hosted by ACM SA and the Greater Gaming Society.",
-    url: "https://velocicode.acmsa.org",
+    url: "https://2026.velocicode.acmsa.org",
     siteName: "ACM San Antonio",
     images: [
       {
@@ -282,8 +282,8 @@ function VelociCodeJsonLd() {
               addressCountry: "US",
             },
           },
-          image: "https://velocicode.acmsa.org/velocicode-logo.png",
-          url: "https://velocicode.acmsa.org",
+          image: "https://2026.velocicode.acmsa.org/velocicode-logo.png",
+          url: "https://2026.velocicode.acmsa.org",
           isAccessibleForFree: true,
           organizer: [
             {
@@ -986,6 +986,9 @@ export default function VelociCodePage() {
               </li>
               <li>
                 <a href="https://acmsa.org/code-of-conduct">Code of conduct</a>
+              </li>
+              <li>
+                <a href="https://hub.velocicode.acmsa.org">All expeditions</a>
               </li>
             </ul>
           </div>

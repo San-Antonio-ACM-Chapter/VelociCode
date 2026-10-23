@@ -1,0 +1,479 @@
+:root {
+  --bg: #0c110e;
+  --surface: #131a16;
+  --line: #24302a;
+  --text: #dce8de;
+  --muted: #8b9c90;
+  --accent: #7cf27a;
+  --accent-ink: #0c110e;
+  --amber: #f5c800;
+  --pixel: "Silkscreen", ui-monospace, monospace;
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --max: 1040px;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+main,
+.top,
+.bottom {
+  width: min(var(--max), 100% - 32px);
+  margin-inline: auto;
+}
+
+/* Header */
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 20px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--pixel);
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.brand em,
+h1 span {
+  font-style: normal;
+  color: var(--accent);
+}
+
+.brand-dino {
+  width: 28px;
+  height: 28px;
+  fill: var(--accent);
+}
+
+/* Selectors can't reach inside <use> copies, so the runner switches the
+   leg animation on through inherited custom properties. */
+.leg-a {
+  animation: var(--leg-a, none);
+}
+
+.leg-b {
+  opacity: 0;
+  animation: var(--leg-b, none);
+}
+
+@keyframes leg-a {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes leg-b {
+  50% {
+    opacity: 1;
+  }
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: var(--text);
+}
+
+/* Hero */
+
+.hero {
+  padding-block: 64px 32px;
+}
+
+.eyebrow {
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: var(--pixel);
+  font-weight: 700;
+  font-size: clamp(44px, 11vw, 112px);
+  line-height: 1;
+  margin-block: 12px 20px;
+  letter-spacing: -0.02em;
+}
+
+.tagline {
+  font-size: clamp(16px, 2.4vw, 20px);
+  color: var(--muted);
+  max-width: 44ch;
+}
+
+.tagline strong {
+  color: var(--text);
+}
+
+.actions,
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    border-color 0.15s,
+    background 0.15s;
+}
+
+.btn:hover {
+  border-color: var(--accent);
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+
+.btn-primary:hover {
+  background: #a3f7a1;
+}
+
+/* Runner: dino jumps over code glyphs scrolling along a line of code */
+
+.runner {
+  position: relative;
+  height: 140px;
+  margin-top: 56px;
+  overflow: hidden;
+  border-bottom: 2px solid var(--line);
+}
+
+.runner-dino {
+  position: absolute;
+  left: 12%;
+  bottom: 22px;
+  width: 57px;
+  height: 57px;
+  fill: var(--accent);
+  animation: jump 1s infinite;
+  --leg-a: leg-a 0.24s steps(1) infinite;
+  --leg-b: leg-b 0.24s steps(1) infinite;
+}
+
+.obstacles span {
+  position: absolute;
+  bottom: 22px;
+  left: 100%;
+  font-family: var(--pixel);
+  font-size: 22px;
+  color: var(--amber);
+  animation: scroll-obstacle 3s linear infinite;
+}
+
+.obstacles span:nth-child(2) {
+  animation-delay: -1s;
+}
+
+.obstacles span:nth-child(3) {
+  animation-delay: -2s;
+}
+
+.ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  white-space: nowrap;
+  font-size: 12px;
+  color: #3d4d44;
+}
+
+.ground span {
+  display: inline-block;
+  animation: scroll-ground 12s linear infinite;
+}
+
+@keyframes scroll-obstacle {
+  from {
+    left: 100%;
+  }
+  to {
+    left: -10%;
+  }
+}
+
+@keyframes scroll-ground {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Each obstacle reaches the dino 0.4s into every 1s cycle. */
+@keyframes jump {
+  0%,
+  15%,
+  65%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-62px);
+  }
+}
+
+/* Sections */
+
+section + section {
+  border-top: 1px solid var(--line);
+}
+
+.about,
+.expeditions {
+  padding-block: 64px;
+}
+
+h2 {
+  font-family: var(--pixel);
+  font-weight: 400;
+  font-size: clamp(20px, 3vw, 26px);
+  margin-bottom: 24px;
+}
+
+.prompt {
+  color: var(--accent);
+}
+
+.lede {
+  max-width: 64ch;
+  color: var(--muted);
+}
+
+.lede strong {
+  color: var(--text);
+}
+
+.facts {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.facts li {
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.facts h3 {
+  font-family: var(--pixel);
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.facts p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Expeditions */
+
+.expedition {
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.expedition + .expedition {
+  margin-top: 16px;
+}
+
+.expedition.is-latest {
+  border-color: var(--accent);
+}
+
+.expedition header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.tag {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+
+.year {
+  font-family: var(--pixel);
+  font-size: clamp(32px, 6vw, 48px);
+  line-height: 1;
+}
+
+.expedition dl {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px 24px;
+}
+
+.expedition dt {
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.expedition dd {
+  font-size: 15px;
+}
+
+.expedition .links {
+  margin-top: 20px;
+}
+
+.next {
+  margin-top: 24px;
+  padding: 16px 20px;
+  border: 1px dashed var(--line);
+  border-radius: 6px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.next a {
+  color: var(--accent);
+}
+
+.blink {
+  color: var(--accent);
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Footer */
+
+.bottom {
+  padding-block: 32px 48px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.foot-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-bottom: 12px;
+}
+
+.foot-links a {
+  text-decoration: none;
+}
+
+.foot-links a:hover {
+  color: var(--text);
+}
+
+@media (max-width: 560px) {
+  .nav {
+    gap: 14px;
+    font-size: 13px;
+  }
+
+  .brand span {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .runner-dino {
+    animation: none;
+    --leg-a: none;
+    --leg-b: none;
+  }
+
+  .obstacles span,
+  .ground span,
+  .blink {
+    animation: none;
+  }
+
+  .obstacles span:nth-child(1) {
+    left: 40%;
+  }
+
+  .obstacles span:nth-child(2) {
+    left: 65%;
+  }
+
+  .obstacles span:nth-child(3) {
+    left: 88%;
+  }
+}

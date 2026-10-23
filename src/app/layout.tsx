@@ -3,7 +3,7 @@ import type React from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://velocicode.acmsa.org"),
+  metadataBase: new URL("https://2026.velocicode.acmsa.org"),
   title: "VelociCode — ACM San Antonio",
   description: "A month-long game jam hosted by ACM San Antonio.",
   icons: {

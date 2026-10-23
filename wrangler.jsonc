@@ -1,12 +1,17 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "velocicode",
+  // One Worker per year. The current year also answers on the bare
+  // subdomain; see docs/ROLLOVER.md for moving it to the next year.
+  "name": "velocicode-2026",
   "compatibility_date": "2026-10-19",
   "assets": {
     "directory": "./out",
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page"
   },
-  "routes": [{ "pattern": "velocicode.acmsa.org", "custom_domain": true }],
+  "routes": [
+    { "pattern": "velocicode.acmsa.org", "custom_domain": true },
+    { "pattern": "2026.velocicode.acmsa.org", "custom_domain": true }
+  ],
   "workers_dev": false
 }

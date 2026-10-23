@@ -1,0 +1,12 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "velocicode-hub",
+  "compatibility_date": "2026-10-19",
+  "assets": {
+    "directory": "./public",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "single-page-application"
+  },
+  "routes": [{ "pattern": "hub.velocicode.acmsa.org", "custom_domain": true }],
+  "workers_dev": false
+}

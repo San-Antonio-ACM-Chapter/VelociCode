@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VelociCode — San Antonio's month-long game jam</title>
+    <meta
+      name="description"
+      content="VelociCode is San Antonio's month-long game jam from ACM San Antonio and the Greater Gaming Society. Every expedition, every year."
+    />
+    <link rel="canonical" href="https://hub.velocicode.acmsa.org/" />
+    <meta property="og:title" content="VelociCode" />
+    <meta
+      property="og:description"
+      content="San Antonio's month-long game jam. One month. One game. Don't go extinct."
+    />
+    <meta property="og:url" content="https://hub.velocicode.acmsa.org/" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Silkscreen:wght@400;700&display=swap"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <svg width="0" height="0" aria-hidden="true" style="position: absolute">
+      <defs>
+        <symbol id="dino" viewBox="0 0 19 19">
+          <path
+            d="M10 0h8v1h-8zM9 1h2v1h-2zM12 1h7v1h-7zM9 2h10v1h-10zM9 3h10v1h-10zM9 4h6v1h-6zM9 5h9v1h-9zM0 6h1v1h-1zM8 6h6v1h-6zM0 7h1v1h-1zM7 7h7v1h-7zM0 8h2v1h-2zM6 8h10v1h-10zM0 9h3v1h-3zM5 9h9v1h-9zM15 9h1v1h-1zM0 10h14v1h-14zM1 11h13v1h-13zM2 12h11v1h-11zM3 13h9v1h-9zM4 14h7v1h-7z"
+          />
+          <path
+            class="leg-a"
+            d="M5 15h3v1h-3zM10 15h2v1h-2zM5 16h2v1h-2zM11 16h1v1h-1zM5 17h1v1h-1zM11 17h2v1h-2zM5 18h2v1h-2z"
+          />
+          <path
+            class="leg-b"
+            d="M5 15h2v1h-2zM9 15h3v1h-3zM5 16h1v1h-1zM10 16h2v1h-2zM5 17h2v1h-2zM10 17h1v1h-1zM10 18h2v1h-2z"
+          />
+        </symbol>
+      </defs>
+    </svg>
+
+    <header class="top">
+      <a class="brand" href="/">
+        <svg class="brand-dino" aria-hidden="true"><use href="#dino" /></svg>
+        <span>Veloci<em>Code</em></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#expeditions">Expeditions</a>
+        <a href="https://discord.gg/t94zZC3Ktm">Discord</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow">ACM San Antonio × Greater Gaming Society</p>
+        <h1>Veloci<span>Code</span></h1>
+        <p class="tagline">
+          San Antonio's month-long game jam.<br />
+          One month. One game. <strong>Don't go extinct.</strong>
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://velocicode.acmsa.org/"
+            >Latest expedition →</a
+          >
+          <a class="btn" href="#expeditions">Past expeditions</a>
+        </div>
+
+        <div class="runner" aria-hidden="true">
+          <svg class="runner-dino"><use href="#dino" /></svg>
+          <div class="obstacles">
+            <span>&lt;/&gt;</span>
+            <span>{ }</span>
+            <span>;</span>
+          </div>
+          <div class="ground">
+            <span
+              >for (let day = 1; day &lt;= 30; day++) { build(); playtest(); ship(); } // don't go extinct ·
+              for (let day = 1; day &lt;= 30; day++) { build(); playtest(); ship(); } // don't go extinct ·
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <h2><span class="prompt">$</span> cat about.txt</h2>
+        <p class="lede">
+          <strong>Veloci</strong> for the dinosaurs, <strong>Code</strong> for
+          what you'll do for a month. VelociCode is a game jam for students,
+          hobbyists, artists, designers, and first-timers. We announce a theme,
+          you build a game around it, and we play everything together at the
+          end.
+        </p>
+        <ul class="facts">
+          <li>
+            <h3>Any engine</h3>
+            <p>
+              Godot, Unity, Unreal, the web, a Python script. If it runs, it
+              counts.
+            </p>
+          </li>
+          <li>
+            <h3>One whole month</h3>
+            <p>
+              Not a sleepless weekend. Enough time to learn something new and
+              still finish.
+            </p>
+          </li>
+          <li>
+            <h3>Built in public</h3>
+            <p>
+              A live theme reveal at kickoff, playtest nights along the way, and
+              a showcase where everyone plays your game.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="expeditions" class="expeditions">
+        <h2><span class="prompt">$</span> ls expeditions/</h2>
+
+        <!--
+          One <article> per year, newest first. See docs/ROLLOVER.md before
+          adding a year: the new year also needs its own site and subdomain.
+        -->
+
+        <article class="expedition is-latest">
+          <header>
+            <span class="tag">Expedition 02</span>
+            <span class="year">2026</span>
+          </header>
+          <dl>
+            <div><dt>When</dt><dd>July 2026 · showcase Aug 1</dd></div>
+            <div><dt>Theme</dt><dd>Fossil</dd></div>
+            <div><dt>Where</dt><dd>Geekdom kickoff · St. Mary's University showcase</dd></div>
+          </dl>
+          <div class="links">
+            <a class="btn btn-primary" href="https://2026.velocicode.acmsa.org/"
+              >Visit the 2026 site →</a
+            >
+            <a class="btn" href="https://itch.io/jam/velocicode-2/entries"
+              >Play the games</a
+            >
+          </div>
+        </article>
+
+        <article class="expedition">
+          <header>
+            <span class="tag">Expedition 01</span>
+            <span class="year">2025</span>
+          </header>
+          <dl>
+            <div><dt>When</dt><dd>June 1–27, 2025</dd></div>
+            <div><dt>Theme</dt><dd>Egg</dd></div>
+            <div><dt>Turnout</dt><dd>39 jammers · 5 games shipped</dd></div>
+          </dl>
+          <div class="links">
+            <a class="btn" href="https://hacksa-velocicode-2025.devpost.com/"
+              >Devpost page</a
+            >
+            <a
+              class="btn"
+              href="https://hacksa-velocicode-2025.devpost.com/project-gallery"
+              >Project gallery</a
+            >
+          </div>
+        </article>
+
+        <aside class="next">
+          <p>
+            <span class="blink" aria-hidden="true">▮</span> Expedition 03 is
+            hatching. Watch the
+            <a href="https://discord.gg/t94zZC3Ktm">ACM SA Discord</a> for dates
+            and the kickoff.
+          </p>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="bottom">
+      <div class="foot-links">
+        <a href="https://acmsa.org/">ACM San Antonio</a>
+        <a href="https://www.meetup.com/greater-gaming-society-of-san-antonio/"
+          >Greater Gaming Society</a
+        >
+        <a href="https://discord.gg/t94zZC3Ktm">Discord</a>
+        <a href="https://acmsa.org/code-of-conduct">Code of conduct</a>
+      </div>
+      <p>© ACM San Antonio · Made in San Antonio</p>
+    </footer>
+  </body>
+</html>
