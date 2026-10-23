@@ -28,8 +28,10 @@ organizer, or an AI agent, can follow it start to finish. The example uses
 - [ ] The new year's site is built and reviewed on a branch off `main`.
 - [ ] You have push access to this repo. CI holds the Cloudflare token
       (`CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID` repository secrets).
-- [ ] Pick a quiet time: the bare domain is down for a few minutes between
-      steps 2 and 3.
+- [ ] Deploying a Worker moves a domain over from whichever Worker had it,
+      with no downtime. This was seen when `velocicode` was renamed to
+      `velocicode-2026` on 2026-10-23. The order below still keeps each
+      year's config accurate.
 
 ## 1. Archive the outgoing year
 
@@ -109,11 +111,12 @@ and check that the bare domain shows 2027 and the hub lists 2027 first.
 
 A failed deploy leaves the previous version serving, so nothing goes down.
 
-- **Domain already in use by another Worker:** step 1 didn't deploy, or ran
-  after step 2. Deploy `year/<old year>` first (Actions → CI → Run workflow
-  on that branch), then re-run `main`. As a last resort, detach the domain
-  from the old Worker in the Cloudflare dashboard (Workers → the Worker →
-  Settings → Domains & Routes) and re-run.
+- **Domain already in use by another Worker:** not seen so far, since
+  deploys have taken domains over automatically. If it happens, deploy
+  `year/<old year>` first (Actions → CI → Run workflow on that branch), then
+  re-run `main`. As a last resort, detach the domain from the old Worker in
+  the Cloudflare dashboard (Workers → the Worker → Settings → Domains &
+  Routes) and re-run.
 - **Authentication error:** the token needs Workers Scripts: Edit and
   Account Settings: Read on the ACM San Antonio account, plus Workers
   Routes: Edit and Zone: Read on `acmsa.org`.

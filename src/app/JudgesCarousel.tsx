@@ -42,7 +42,7 @@ export function JudgesCarousel({ judges }: { judges: Judge[] }) {
   if (judges.length === 0) {
     return (
       <p className={styles["judges-empty"]}>
-        Judges will be announced as they confirm — check back closer to the
+        Judges will be announced as they confirm. Check back closer to the
         showcase.
       </p>
     );

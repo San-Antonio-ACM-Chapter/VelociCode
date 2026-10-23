@@ -4,7 +4,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://2026.velocicode.acmsa.org"),
-  title: "VelociCode — ACM San Antonio",
+  title: {
+    default: "VelociCode 2026 | ACM San Antonio",
+    template: "%s | VelociCode 2026",
+  },
   description: "A month-long game jam hosted by ACM San Antonio.",
   icons: {
     icon: "/velocicode-logo.png",

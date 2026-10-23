@@ -43,7 +43,7 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "The Compass — VelociCode",
+  title: "The Compass",
   description: "Consult the compass. Guess the theme.",
   robots: { index: false, follow: false },
 };

@@ -62,35 +62,34 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "VelociCode — ACM San Antonio",
   description:
     "San Antonio's month-long game jam. One month. One game. No excuses. Hosted by ACM SA and the Greater Gaming Society.",
   alternates: {
     canonical: "https://2026.velocicode.acmsa.org",
   },
   openGraph: {
-    title: "VelociCode — ACM San Antonio",
+    title: "VelociCode 2026 | ACM San Antonio",
     description:
       "San Antonio's month-long game jam. One month. One game. No excuses. Hosted by ACM SA and the Greater Gaming Society.",
     url: "https://2026.velocicode.acmsa.org",
-    siteName: "ACM San Antonio",
+    siteName: "VelociCode",
     images: [
       {
-        url: "/velocicode-logo.png",
-        width: 500,
-        height: 500,
-        alt: "VelociCode dino logo",
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "VelociCode 2026: Expedition 02, a month-long game jam",
         type: "image/png",
       },
     ],
     type: "website",
   },
   twitter: {
-    card: "summary",
-    title: "VelociCode — ACM San Antonio",
+    card: "summary_large_image",
+    title: "VelociCode 2026 | ACM San Antonio",
     description:
       "San Antonio's month-long game jam. One month. One game. No excuses. Hosted by ACM SA and the Greater Gaming Society.",
-    images: ["/velocicode-logo.png"],
+    images: ["/og.png"],
   },
 };
 
@@ -157,7 +156,7 @@ const CHALLENGES = [
     badge: null,
     rank: "the prompt, nailed",
     title: "Best Theme",
-    desc: "The cleverest, boldest, most heartfelt take on this year's theme reveal — the game that makes the prompt sing. Surprise us.",
+    desc: "The cleverest, boldest, most heartfelt take on this year's theme reveal: the game that makes the prompt sing. Surprise us.",
     prize: "$200 Prize Pool",
   },
   {
@@ -166,7 +165,7 @@ const CHALLENGES = [
     badge: "★ the headline award ★",
     rank: "the big one",
     title: "Best Overall",
-    desc: "Fun to play, polished, and it sticks with you. The judges' pick for the game that nails it top to bottom — story, feel, and finish.",
+    desc: "Fun to play, polished, and it sticks with you. The judges' pick for the game that nails it top to bottom: story, feel, and finish.",
     prize: "$100 Prize Pool",
   },
   {
@@ -175,7 +174,7 @@ const CHALLENGES = [
     badge: null,
     rank: "voted by the room",
     title: "Crowd Favorite",
-    desc: "Decided by the community. Everyone at the showcase gets a ticket to vote — the people's champ takes it home, no judges required.",
+    desc: "Decided by the community. Everyone at the showcase gets a ticket to vote, and the people's champ takes it home, no judges required.",
     prize: "$20 Per Team Member",
   },
 ];
@@ -233,7 +232,7 @@ const MARQUEE_ITEMS = [
 const FAQ_ITEMS: FaqItem[] = [
   {
     q: "Do I need to know how to code?",
-    a: "Nope. Artists, designers, writers, audio folks — there's a role for everyone. Show up at kickoff, find a team, contribute what you bring.",
+    a: "Nope. Artists, designers, writers, audio folks: there's a role for everyone. Show up at kickoff, find a team, contribute what you bring.",
   },
   {
     q: "What engine should I use?",
@@ -245,7 +244,7 @@ const FAQ_ITEMS: FaqItem[] = [
   },
   {
     q: "I'm not in San Antonio. Can I still join?",
-    a: "Yes — itch.io is online and Discord is online. You'll miss kickoff and the showcase in person, but mentorship and the jam itself are remote-friendly.",
+    a: "Yes, itch.io is online and Discord is online. You'll miss kickoff and the showcase in person, but mentorship and the jam itself are remote-friendly.",
   },
   {
     q: "Can I work in a team?",
@@ -593,16 +592,16 @@ export default function VelociCodePage() {
           <div className={styles["section-eye"]}>Field Journal · Entry 01</div>
           <h2 className={styles["section-title"]}>
             One month, <span className={styles.accent}>one game.</span>
-            <span className={styles.scribble}>— scrappy on purpose</span>
+            <span className={styles.scribble}>scrappy on purpose</span>
           </h2>
 
           <div className={styles["about-grid"]}>
             <div className={styles["about-body"]}>
               <p>
-                <span className={styles.hand}>Hello, friend —</span>
+                <span className={styles.hand}>Hello, friend!</span>
                 <strong>VelociCode</strong> is San Antonio&apos;s month-long
                 game jam. Year one was small and scrappy and full of
-                first-timers — so good we couldn&apos;t <em>not</em> do it
+                first-timers. It was so good we couldn&apos;t <em>not</em> do it
                 again. Year two doubles down: a full month to build, a community
                 kickoff, mid-jam playtest, and a science-fair-style showcase.
               </p>
@@ -626,13 +625,13 @@ export default function VelociCodePage() {
                   >
                     San Antonio community
                   </a>
-                </strong>{" "}
-                — students, hobbyists, designers, artists, devs, first-timers.
+                </strong>
+                : students, hobbyists, designers, artists, devs, first-timers.
                 Show up solo, find a team, ship something you can hand a
                 controller to.
               </p>
               <p>
-                It&apos;s not a hackathon — there&apos;s no all-nighter, no
+                It&apos;s not a hackathon. There&apos;s no all-nighter, no
                 overworking yourself. It&apos;s a month. Make a tiny thing. Make
                 it bold. Make it yours.
               </p>
@@ -663,7 +662,7 @@ export default function VelociCodePage() {
             <span className={styles.scribble}>five waypoints, one month</span>
           </h2>
           <p style={{ maxWidth: "60ch", marginTop: "8px" }}>
-            Hit them all or just the ones you can — the whole jam runs through
+            Hit them all or just the ones you can. The whole jam runs through
             the month, so you&apos;re never out of bounds.
           </p>
 
@@ -692,7 +691,7 @@ export default function VelociCodePage() {
             </h2>
             <p className={styles["sec-lead"]}>
               Three prizes, one month of building. Chase all three or just the
-              one that you want — the game you finish is in the running.
+              one that you want. Every game you finish is in the running.
             </p>
 
             <div className={styles.podium}>
@@ -786,7 +785,7 @@ export default function VelociCodePage() {
           </h2>
           <p className={styles["sec-lead"]}>
             Last year a handful of local crews turned a friendly gathering into
-            a real event. These are the folks lending space, prizes, and time —
+            a real event. These are the folks lending space, prizes, and time,
             pinned up like patches, because that&apos;s exactly what they are.
           </p>
 
@@ -795,7 +794,7 @@ export default function VelociCodePage() {
               <div className={styles["wall-label"]}>
                 Sponsors{" "}
                 <span className={styles["wall-label-note"]}>
-                  — the crews chipping in prizes &amp; support
+                  · the crews chipping in prizes &amp; support
                 </span>
               </div>
               <div className={styles.wall}>
@@ -824,7 +823,7 @@ export default function VelociCodePage() {
           <div className={styles["wall-label"]}>
             Community partners{" "}
             <span className={styles["wall-label-note"]}>
-              — the groups making it a San Antonio thing
+              · the groups making it a San Antonio thing
             </span>
           </div>
           <div className={styles.wall}>
@@ -848,7 +847,7 @@ export default function VelociCodePage() {
                 Thank you, friends.
               </strong>
               <span className={styles["thanks-body"]}>
-                VelociCode runs on people who show up for it — venues, prizes,
+                VelociCode runs on people who show up for it: venues, prizes,
                 mentors, snacks. Want your logo up here next year? We&apos;ve
                 always got room on the wall.
               </span>
@@ -871,7 +870,7 @@ export default function VelociCodePage() {
         </div>
       </SectionReveal>
 
-      {/* ─── INVOLVED — set VELOCICODE_SHOW_INVOLVED=false to hide ──── */}
+      {/* ─── INVOLVED · hidden when SHOW_OUTREACH in events.ts is false ──── */}
       {SHOW_OUTREACH && (
         <SectionReveal
           className={`${styles.block} ${styles.involved}`}
@@ -895,7 +894,7 @@ export default function VelociCodePage() {
             </h2>
             <p style={{ maxWidth: "60ch", marginTop: "8px" }}>
               Last year a handful of local groups turned the jam from a friendly
-              gathering into a real community event. Pick a lane — or three.
+              gathering into a real community event. Pick a lane, or three.
             </p>
 
             <div className={styles.patches}>
@@ -962,7 +961,7 @@ export default function VelociCodePage() {
             </div>
             <p>
               A month-long game jam from ACM San Antonio and the Greater Gaming
-              Society. Built for the San Antonio community — show up, build a
+              Society. Built for the San Antonio community. Show up, build a
               game, hand someone a controller.
             </p>
             <p style={{ marginTop: "12px", opacity: 0.55 }}>

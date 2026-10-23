@@ -124,7 +124,7 @@ export const STOPS: InputStop[] = [
     date: "2026-07-30T23:59",
     title: "Submissions Due",
     location: "itch.io",
-    meta: "Don't be late — late builds aren't eligible for prizes or presentations.",
+    meta: "Don't be late. Late builds aren't eligible for prizes or presentations.",
     cta: "Submit on itch.io",
     href: "https://itch.io/jam/velocicode-2",
     external: false,

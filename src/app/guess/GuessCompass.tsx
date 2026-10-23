@@ -31,7 +31,7 @@ const CRYPTIC = [
   "Neither confirmed nor denied by HQ.",
   "Some things are only revealed at kickoff.",
   "The compass needle blurs in this humidity.",
-  "Classified. Eyes only — and not yours.",
+  "Classified. Eyes only, and not yours.",
   "Ask the jungle. The jungle knows.",
   "The compass sees... something. It won't say.",
   "Patience, explorer. The theme drops July 1st.",
@@ -140,7 +140,7 @@ export function GuessOracle() {
               <p className={styles["response-text"]}>{response}</p>
               {submitCount > 0 && (
                 <div className={styles["response-hint"]}>
-                  — try a different guess, or{" "}
+                  Try a different guess, or{" "}
                   <a
                     href="https://www.devsa.community/events/kickoff-velocicode-2-mos6r72t"
                     target="_blank"

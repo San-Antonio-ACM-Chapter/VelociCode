@@ -66,7 +66,7 @@ export function WinnersSection({
                         {p.title}
                       </div>
                       <span className={styles["winner-project-team"]}>
-                        — {p.team}
+                        by {p.team}
                       </span>
                     </div>
                   </a>
